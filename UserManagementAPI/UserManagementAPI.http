@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:5133
+
+### Get all users
+GET {{baseUrl}}/api/users
+Accept: application/json
+
+### Get user by ID
+GET {{baseUrl}}/api/users/1
+Accept: application/json
+
+### Create new user
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "Password123!"
+}
+
+### Update user
+PUT {{baseUrl}}/api/users/1
+Content-Type: application/json
+
+{
+    "name": "John Doe Updated",
+    "email": "john.updated@example.com",
+    "password": "NewPassword123!"
+}
+
+### Delete user
+DELETE {{baseUrl}}/api/users/1
